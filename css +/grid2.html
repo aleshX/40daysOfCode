@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grid CSS</title>
+    <style>
+        .wrapper > div{
+            background-color:#eee;
+            padding:1em;
+        }
+
+        .wrapper :nth-child(odd){
+            background: #ddd;
+        }
+
+        .wrapper{
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-gap: 1rem;
+            padding: 1rem 1rem 0 1rem;
+            /*grid-auto-rows: 100px, auto;*/
+            grid-auto-rows: minmax(100px, auto);
+        }
+
+        .nested{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr );
+            grid-gap: 1rem;
+        }
+
+        .nested > div{
+            border: 1px solid #333;
+            padding: 1em;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+        <div class="nested">
+            <div>
+                Lorem, ipsum.
+            </div>
+            <div>
+                Lorem, ipsum.
+            </div>
+            <div>
+                Lorem, ipsum.
+            </div>
+            <div>
+                Lorem, ipsum.
+            </div>
+        </div>
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+        <div>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur est consequatur quibusdam suscipit quod temporibus, pariatur reiciendis neque animi asperiores voluptatibus repudiandae aperiam ipsam natus, et officiis enim dignissimos.
+        </div>
+        <div>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, dicta?
+        </div>
+
+    </div>
+    
+</body>
+</html>
